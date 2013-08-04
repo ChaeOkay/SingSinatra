@@ -24,3 +24,19 @@ get '/more/*' do
   params[:splat]
   #localhost:9393/more/apple/orange/banana/starfruit/uglyfruit/passionfruit
 end
+
+
+####################
+
+get '/form' do
+  erb :form
+  #localhost:9393/form
+  #provies form field for input data, see views/form.erb
+end
+
+post '/form' do
+  "you said #{params[:message]}"
+  #take input data from localhost:9393/form field and displays it
+end
+
+####################
