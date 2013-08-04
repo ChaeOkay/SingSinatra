@@ -40,3 +40,16 @@ post '/form' do
 end
 
 ####################
+
+get '/secret' do
+  erb :secret
+end
+
+post '/secret' do
+  params[:secret].reverse
+end
+
+get '/decrypt/:secret' do
+  params[:secret].reverse
+  #ocalhost:9393/decrypt/terces
+end
