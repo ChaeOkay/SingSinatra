@@ -53,3 +53,15 @@ get '/decrypt/:secret' do
   params[:secret].reverse
   #ocalhost:9393/decrypt/terces
 end
+
+####################
+
+# no_found do
+#   status 404
+#   'not found'
+# end
+
+not_found do
+  halt 404, 'page not found'
+  #localhost:9393/missing
+end
